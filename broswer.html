@@ -54,43 +54,14 @@
 <body>
     <div class="container">
         <h1>Welcome to Blaze Search</h1>
-        <form id="searchForm">
+        <form action="https://www.google.com/search" method="GET" target="_blank">
             <input type="text" id="search_query" name="q" placeholder="Enter your search query...">
             <input type="submit" value="Search">
         </form>
         <div class="logo">
-            <img src="https://justskips.net.au/wp-content/uploads/2023/10/Fire-Season-Adelaide.jpg" alt="Blaze Search Logo" alt="Blaze Search Logo" width="800">
+            <img src="https://justskips.net.au/wp-content/uploads/2023/10/Fire-Season-Adelaide.jpg" alt="Blaze Search Logo" width="800">
         </div>
     </div>
-
-    <script>
-        document.getElementById("searchForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent form submission
-
-            // Get the value of the search input
-            var query = document.getElementById("search_query").value;
-
-            // Check if the query is a URL or text
-            if (isURL(query)) {
-                // If it's a URL, open it in a new tab
-                window.open(query, "_blank");
-            } else {
-                // If it's not a URL, perform a Google search
-                window.open("https://www.google.com/search?q=" + encodeURIComponent(query), "_blank");
-            }
-        });
-
-        // Function to check if a string is a URL
-        function isURL(str) {
-            var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
-                '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
-                '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
-                '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
-                '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
-                '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
-            return !!pattern.test(str);
-        }
-    </script>
 </body>
 </html>
 
