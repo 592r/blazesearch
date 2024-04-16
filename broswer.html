@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blaze Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 100px auto;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-top: 30px;
+        }
+        input[type="text"] {
+            width: 60%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            font-size: 16px;
+            outline: none;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .logo {
+            margin-top: 50px;
+        }
+        .logo img {
+            display: block;
+            margin: 0 auto; /* Align the image to the center */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Blaze Search</h1>
+        <form action="https://www.google.com/search" method="GET" target="_blank">
+            <input type="text" id="search_query" name="q" placeholder="Enter your search query...">
+            <input type="submit" value="Search">
+        </form>
+        <div class="logo">
+            <img src="https://justskips.net.au/wp-content/uploads/2023/10/Fire-Season-Adelaide.jpg" alt="Blaze Search Logo" width="800">
+        </div>
+    </div>
+</body>
+</html>
