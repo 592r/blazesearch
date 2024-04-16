@@ -59,7 +59,7 @@
             <input type="submit" value="Search">
         </form>
         <div class="logo">
-            <img src="https://justskips.net.au/wp-content/uploads/2023/10/Fire-Season-Adelaide.jpg" alt="Blaze Search Logo" width="200">
+            <img src="https://justskips.net.au/wp-content/uploads/2023/10/Fire-Season-Adelaide.jpg" alt="Blaze Search Logo" alt="Blaze Search Logo" width="800">
         </div>
     </div>
 
@@ -72,10 +72,10 @@
 
             // Check if the query is a URL or text
             if (isURL(query)) {
-                // If it's a URL, redirect to the URL
-                window.location.href = query;
+                // If it's a URL, open it in a new tab
+                window.open(query, "_blank");
             } else {
-                // If it's not a URL, open Google search in a new tab
+                // If it's not a URL, perform a Google search
                 window.open("https://www.google.com/search?q=" + encodeURIComponent(query), "_blank");
             }
         });
@@ -93,3 +93,4 @@
     </script>
 </body>
 </html>
+
